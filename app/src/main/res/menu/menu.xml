@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Home">
+        <menu>
+    <item
+        android:id="@+id/firstItem"
+        android:icon="@drawable/pend"
+
+        android:title="Pending Duty leaves" />
+        </menu>
+    </item>
+
+    <item android:title="Contact">
+
+
+    <menu>
+        <group>
+    <item
+        android:id="@+id/secondtItem"
+        android:title="Help"
+        android:icon="@drawable/help1"/>
+    <item
+        android:id="@+id/thirdItem"
+        android:title="About"
+        android:icon="@drawable/about"/>
+    <item
+        android:id="@+id/frth"
+        android:title="Report Bugs"
+        android:icon="@drawable/bugg"/>
+        </group>
+        </menu>
+    </item>
+
+    <item android:title="Account">
+        <menu>
+    <item
+
+        android:id="@+id/fourth"
+        android:icon="@drawable/lgt"
+        android:title="Logout" />
+        </menu>
+    </item>
+    <item android:title="Admin">
+        <menu>
+    <item android:icon="@drawable/admin"
+        android:visible="false"
+        android:id="@+id/five"
+        android:title="Admin Roles"/>
+        </menu>
+    </item>
+
+
+</menu>

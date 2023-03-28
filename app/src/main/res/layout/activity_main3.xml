@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout"
+
+        android:layout_width="match_parent"
+        >
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+
+        android:background="@drawable/splashscreen"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            app:title="Dashboard"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="#AFC8E0"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:menu="@menu/menudash" />
+
+        <TextView
+        android:layout_width="200dp"
+        android:id="@+id/txt11"
+            android:layout_marginLeft="30dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar3"
+        android:textColor="@color/black"
+        android:text="Today's Seminar"
+        android:textSize="20dp"></TextView>
+
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_margin="20dp"
+
+        android:id="@+id/scrl"
+        android:layout_below="@+id/txt11">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="347dp"
+                android:layout_height="207dp"
+                android:src="@drawable/simar" />
+            <ImageView
+                android:layout_width="347dp"
+                android:layout_height="207dp"
+                android:src="@drawable/simar3" />
+            <ImageView
+                android:layout_width="347dp"
+                android:layout_height="207dp"
+                android:src="@drawable/seminar" />
+            <ImageView
+                android:layout_width="347dp"
+                android:layout_height="207dp"
+                android:src="@drawable/simar" />
+            <ImageView
+                android:layout_width="347dp"
+                android:layout_height="207dp"
+                android:src="@drawable/simar" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <TableLayout
+        android:id="@+id/simpleTableLayout1"
+        android:layout_width="301dp"
+        android:layout_height="81dp"
+        android:layout_below="@id/scrl"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="100dp"
+        android:stretchColumns="1"> <!-- stretch the second column of the layout-->
+
+        <!-- first row of the table layout-->
+        <TableRow
+
+            android:id="@+id/firstRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape2">
+
+            <!-- first element of the row-->
+
+
+            <TextView
+                android:id="@+id/let"
+
+                android:layout_width='220dp'
+
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+
+
+                android:text="Apply Duty leave"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/getst123"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#E5E5E5"
+                android:src="@drawable/image_arrow" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/simpleTableLayout"
+        android:layout_width="301dp"
+        android:layout_height="81dp"
+        android:layout_below="@id/simpleTableLayout1"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="10dp"
+        android:stretchColumns="1"> <!-- stretch the second column of the layout-->
+
+        <!-- first row of the table layout-->
+        <TableRow
+
+            android:id="@+id/firstRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape2">
+
+            <!-- first element of the row-->
+
+
+            <TextView
+                android:id="@+id/let1"
+
+                android:layout_width='220dp'
+
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+
+
+                android:text="Duty Leave Status"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageButton
+                android:id="@+id/getst1234"
+                android:layout_width="wrap_content"
+                android:layout_height="57dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="#E5E5E5"
+                android:src="@drawable/image_arrow" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menu"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

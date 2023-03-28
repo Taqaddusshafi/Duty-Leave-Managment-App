@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
+    android:padding="20dp"
+    tools:context=".MainActivity2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/sg"
+
+        android:textSize="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sign UP">
+    </TextView>
+    <EditText
+        android:id="@+id/semail"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:layout_below="@+id/name11"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <EditText
+        android:id="@+id/name11"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/shape"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <EditText
+
+        android:layout_marginTop="10dp"
+        android:id="@+id/spassword"
+        android:padding="10dp"
+        android:background="@drawable/shape"
+        android:layout_below="@+id/semail"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:hint="Password"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:layout_width="250dp"
+        android:id="@+id/sgup"
+        android:text="Sign Up"
+        android:layout_height="80dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#FA8900"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/spassword"></Button>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/signup"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="serve"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="ALready have an account?Login here"
+        android:layout_below="@id/sgup"></TextView>
+</RelativeLayout>
