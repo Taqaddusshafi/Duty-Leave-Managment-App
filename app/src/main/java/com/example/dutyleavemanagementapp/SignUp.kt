@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
@@ -35,6 +33,7 @@ class SignUp : AppCompatActivity() {
         }
     }
     private  fun performsignup(){
+        var progressbar = findViewById<ProgressBar>(R.id.progressBar)
         val email= findViewById<EditText>(R.id.semail)
         val name= findViewById<EditText>(R.id.name11)
         val pass= findViewById<EditText>(R.id.spassword)
@@ -45,9 +44,11 @@ class SignUp : AppCompatActivity() {
             Toast.makeText(baseContext,"Name,Email or Password cant be empty",Toast.LENGTH_SHORT).show()
             return
         }
+        progressbar.setVisibility(View.VISIBLE);
         auth.createUserWithEmailAndPassword(inputemail, inputpass,)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    progressbar.setVisibility(View.VISIBLE);
 
                     val user = FirebaseAuth.getInstance().currentUser
                     val profileUpdates = UserProfileChangeRequest.Builder()
@@ -65,6 +66,7 @@ class SignUp : AppCompatActivity() {
                     startActivity(intent)
 
                 } else {
+                    progressbar.setVisibility(View.GONE);
                     // If sign in fails, display a message to the user.
                     Toast.makeText(baseContext,"Some thing went wrong please try gain",Toast.LENGTH_LONG).show()
 

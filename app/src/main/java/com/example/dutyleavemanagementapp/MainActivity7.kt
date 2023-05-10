@@ -11,18 +11,7 @@ class MainActivity7 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main7)
-        val username=findViewById<EditText>(R.id.Username)
-        val password=findViewById<EditText>(R.id.Password)
-        val adminlogin=findViewById<Button>(R.id.adminbtn)
-        val a=username.text.toString()
-        val b=password.text.toString()
 
-        adminlogin.setOnClickListener(){
-
-
-
-
-        }
 
     }
 }

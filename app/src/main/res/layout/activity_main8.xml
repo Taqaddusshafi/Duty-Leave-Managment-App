@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
     tools:context=".MainActivity8">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar21"
+        android:layout_width="match_parent"
+        app:title="Admin Dashboard"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:background="#AFC8E0"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:menu="@menu/menudash"
+        />
+    <TextView
+        android:id="@+id/idd"
+        android:layout_below="@+id/toolbar21"
+        android:layout_width='300dp'
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="#061356"
+        android:textAlignment="center"
+
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+
+        android:layout_centerHorizontal="true"
+        android:text="Choose the image  and provide the Link" />
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:id="@+id/abc"
+        android:padding="5dp"
+        android:layout_below="@+id/idd"
+        android:layout_marginLeft="30dp"
+
+        android:layout_height="300dp"
+        android:layout_marginEnd="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt00"
+            android:layout_centerHorizontal="true"
+            android:text="Click Blow To Choose Image "
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgset"
+            android:layout_below="@+id/txt00"
+            android:layout_width="match_parent"
+            android:src="@drawable/vector2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/link"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/abc"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/newsh"
+        android:ems="10"
+        android:hint="link"
+        android:padding="10dp"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="160dp" />
+    <Button
+        android:layout_width="250dp"
+        android:id="@+id/submit"
+        android:text="Upload"
+        android:layout_height="80dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FA8900"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/link"></Button>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_below="@+id/link"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

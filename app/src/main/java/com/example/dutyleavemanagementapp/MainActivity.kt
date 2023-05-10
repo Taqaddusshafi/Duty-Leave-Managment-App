@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         Handler(Looper.getMainLooper()).postDelayed({
-            var intent = Intent(applicationContext, Login1::class.java)
+            var intent = Intent(applicationContext, MainActivity3::class.java)
             startActivity(intent)
             finish()
         }, 5000)

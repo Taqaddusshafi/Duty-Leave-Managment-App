@@ -9,6 +9,11 @@
         android:icon="@drawable/pend"
 
         android:title="Pending Duty leaves" />
+            <item
+                android:id="@+id/scit"
+                android:icon="@drawable/events"
+
+                android:title="Upcoming Events" />
         </menu>
     </item>
 

@@ -7,68 +7,40 @@
     android:background="@drawable/splashscreen"
     android:padding="20dp"
     tools:context=".MainActivity2">
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/lg"
-
-        android:textSize="50dp"
-        android:layout_marginTop="80dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Admin Login">
-    </TextView>
-
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/shape"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="160dp" />
-
-    <EditText
-
-        android:layout_marginTop="20dp"
-        android:id="@+id/Password"
-        android:padding="10dp"
-        android:background="@drawable/shape"
-        android:layout_below="@+id/Username"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:hint="password"
-        android:ems="10"
-        android:inputType="textPassword" />
 
 
     <Button
         android:layout_width="250dp"
         android:id="@+id/adminbtn"
-        android:text="Login"
+        android:text="DUTY LEAVE MANAGEMENT"
+        android:layout_centerVertical="true"
         android:layout_height="80dp"
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:backgroundTint="#FA8900"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/Password"></Button>
+        android:layout_marginBottom="10dp">
 
-
-
-
-    <ProgressBar
-
-        android:id="@+id/progressBar"
+        </Button>
+    <Button
+        android:layout_width="250dp"
+        android:id="@+id/currentevent"
+        android:text="EVENT SETTINGS"
+        android:layout_centerVertical="true"
+        android:layout_height="80dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:indeterminateTint="@color/green"
-        android:layout_below="@+id/lpass"
-        android:visibility="gone"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/adminbtn"
+        android:backgroundTint="#FA8900"
+        android:layout_marginBottom="10dp">
+
+    </Button>
+
+
+
+
+
 </RelativeLayout>
